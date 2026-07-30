@@ -1,0 +1,19 @@
+from typing import Protocol
+
+
+class SubscriberStore(Protocol):
+    async def add(self, user_id: int) -> None: ...
+
+    async def remove(self, user_id: int) -> None: ...
+
+    async def contains(self, user_id: int) -> bool: ...
+
+    async def get_all(self) -> list[int]: ...
+
+
+class PostTracker(Protocol):
+    """Tracks channel posts created on behalf of users to avoid duplicate delivery."""
+
+    async def mark_author_post(self, channel_message_id: int, user_id: int) -> None: ...
+
+    async def pop_author(self, channel_message_id: int) -> int | None: ...
