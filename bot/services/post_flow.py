@@ -25,11 +25,23 @@ async def publish_user_message(
             author_id=author_id,
         )
 
-    await ctx.publisher.delete_user_message(chat_id=chat_id, message_id=message_id)
+    # Удаляем оригинал из ЛС
+    await ctx.publisher.delete_user_message(
+        chat_id=chat_id,
+        message_id=message_id,
+    )
+
+    # Возвращаем пользователю форвард из канала
     await ctx.publisher.forward_from_channel(
         chat_id=chat_id,
         channel_message_id=channel_message.message_id,
     )
+
+    # СРАЗУ рассылаем всем подписчикам
+    await ctx.broadcaster.broadcast_channel_post(
+        channel_message.message_id,
+    )
+
     ctx.cooldown.mark_posted(author_id)
 
 
