@@ -1,8 +1,6 @@
 from dataclasses import dataclass
 from os import getenv
 
-
-
 @dataclass(frozen=True, slots=True)
 class Settings:
     bot_token: str
