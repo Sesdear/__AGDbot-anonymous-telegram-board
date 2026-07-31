@@ -1,6 +1,6 @@
 from aiogram import Router
 
-from bot.handlers import channel_posts, commands, cooldown_callbacks, private_messages
+from handlers import channel_posts, commands, cooldown_callbacks, private_messages
 
 
 def setup_routers() -> Router:

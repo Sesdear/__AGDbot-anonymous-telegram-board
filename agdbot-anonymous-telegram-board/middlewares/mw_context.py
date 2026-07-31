@@ -3,8 +3,7 @@ from typing import Any, Awaitable, Callable
 from aiogram import BaseMiddleware
 from aiogram.types import TelegramObject
 
-from bot.context import AppContext
-
+from context import AppContext
 
 class ContextMiddleware(BaseMiddleware):
     def __init__(self, context: AppContext) -> None:

@@ -1,7 +1,7 @@
 from aiogram.types import Message
 
-from bot.context import AppContext
-from bot.utils.message import is_forwarded
+from context import AppContext
+from utils.message import is_forwarded
 
 
 async def publish_user_message(

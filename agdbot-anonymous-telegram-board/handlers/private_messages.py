@@ -2,10 +2,10 @@ from aiogram import F, Router
 from aiogram.enums import ChatType
 from aiogram.types import Message
 
-from bot.context import AppContext
-from bot.filters.not_command import NotCommand
-from bot.services.hold_flow import hold_message_for_cooldown
-from bot.services.post_flow import publish_from_message
+from context import AppContext
+from filters.not_command import NotCommand
+from services.hold_flow import hold_message_for_cooldown
+from services.post_flow import publish_from_message
 
 router = Router(name="private")
 

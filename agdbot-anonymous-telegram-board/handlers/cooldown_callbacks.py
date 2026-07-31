@@ -3,10 +3,10 @@ import logging
 from aiogram import F, Router
 from aiogram.types import CallbackQuery
 
-from bot.context import AppContext
-from bot.service_messages.keyboards import CALLBACK_PREFIX
-from bot.services.hold_flow import refresh_cooldown_hold_message
-from bot.services.post_flow import publish_user_message
+from context import AppContext
+from service_messages.keyboards import CALLBACK_PREFIX
+from services.hold_flow import refresh_cooldown_hold_message
+from services.post_flow import publish_user_message
 
 logger = logging.getLogger(__name__)
 

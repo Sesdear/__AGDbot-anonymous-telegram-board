@@ -3,7 +3,7 @@ import logging
 from aiogram import Bot
 from aiogram.exceptions import TelegramForbiddenError
 
-from bot.storage.protocols import PostTracker, SubscriberStore
+from storage.protocols import PostTracker, SubscriberStore
 
 logger = logging.getLogger(__name__)
 

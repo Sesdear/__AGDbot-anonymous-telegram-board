@@ -5,16 +5,16 @@ from aiogram import Bot, Dispatcher
 from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
 
-from bot.config.app_config import load_app_config
-from bot.config.settings import load_settings
-from bot.context import AppContext
-from bot.handlers import setup_routers
-from bot.middlewares.context import ContextMiddleware
-from bot.services.broadcaster import Broadcaster
-from bot.services.cooldown import CooldownService
-from bot.services.publisher import Publisher
-from bot.storage.held_messages import InMemoryHeldMessageStore
-from bot.storage.memory import InMemoryPostTracker, InMemorySubscriberStore
+from config.app_config import load_app_config
+from config.settings import load_settings
+from context import AppContext
+from handlers import setup_routers
+from middlewares.mw_context import ContextMiddleware
+from services.broadcaster import Broadcaster
+from services.cooldown import CooldownService
+from services.publisher import Publisher
+from storage.held_messages import InMemoryHeldMessageStore
+from storage.memory import InMemoryPostTracker, InMemorySubscriberStore
 
 logger = logging.getLogger(__name__)
 

@@ -1,7 +1,6 @@
 from dataclasses import dataclass
 from os import getenv
 
-from dotenv import load_dotenv
 
 
 @dataclass(frozen=True, slots=True)
@@ -11,7 +10,6 @@ class Settings:
 
 
 def load_settings() -> Settings:
-    load_dotenv()
 
     bot_token = getenv("BOT_TOKEN")
     channel_id_raw = getenv("CHANNEL_ID")

@@ -1,11 +1,11 @@
 from aiogram.types import Message
 
-from bot.context import AppContext
-from bot.service_messages.cooldown import send_cooldown_hold_message
-from bot.service_messages.keyboards import cooldown_hold_keyboard
-from bot.service_messages.texts import COOLDOWN_HOLD_TEXT
-from bot.utils.message import is_forwarded
-from bot.utils.ids import new_hold_id
+from context import AppContext
+from service_messages.cooldown import send_cooldown_hold_message
+from service_messages.keyboards import cooldown_hold_keyboard
+from service_messages.texts import COOLDOWN_HOLD_TEXT
+from utils.message import is_forwarded
+from utils.ids import new_hold_id
 
 
 async def hold_message_for_cooldown(ctx: AppContext, message: Message) -> None:

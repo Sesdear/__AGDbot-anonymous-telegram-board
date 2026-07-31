@@ -1,8 +1,8 @@
 from aiogram import Bot
 from aiogram.types import Message
 
-from bot.service_messages.keyboards import cooldown_hold_keyboard
-from bot.service_messages.texts import COOLDOWN_HOLD_TEXT
+from service_messages.keyboards import cooldown_hold_keyboard
+from service_messages.texts import COOLDOWN_HOLD_TEXT
 
 
 async def send_cooldown_hold_message(

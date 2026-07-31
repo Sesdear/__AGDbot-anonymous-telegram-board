@@ -2,13 +2,13 @@ from dataclasses import dataclass
 
 from aiogram import Bot
 
-from bot.config.app_config import AppConfig
-from bot.config.settings import Settings
-from bot.services.broadcaster import Broadcaster
-from bot.services.cooldown import CooldownService
-from bot.services.publisher import Publisher
-from bot.storage.held_messages import HeldMessageStore
-from bot.storage.protocols import PostTracker, SubscriberStore
+from config.app_config import AppConfig
+from config.settings import Settings
+from services.broadcaster import Broadcaster
+from services.cooldown import CooldownService
+from services.publisher import Publisher
+from storage.held_messages import HeldMessageStore
+from storage.protocols import PostTracker, SubscriberStore
 
 
 @dataclass(slots=True)
@@ -22,3 +22,4 @@ class AppContext:
     post_tracker: PostTracker
     cooldown: CooldownService
     held_messages: HeldMessageStore
+

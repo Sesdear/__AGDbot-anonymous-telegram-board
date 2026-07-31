@@ -3,7 +3,7 @@ import logging
 from aiogram import Bot
 from aiogram.types import Message
 
-from bot.storage.protocols import PostTracker
+from storage.protocols import PostTracker
 
 logger = logging.getLogger(__name__)
 

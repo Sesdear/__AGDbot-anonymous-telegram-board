@@ -3,7 +3,7 @@ import logging
 from aiogram import Router
 from aiogram.types import Message
 
-from bot.context import AppContext
+from context import AppContext
 
 logger = logging.getLogger(__name__)
 
