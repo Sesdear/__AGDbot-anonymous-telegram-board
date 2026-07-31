@@ -9,5 +9,4 @@ FROM python:3.11-slim
 WORKDIR /app
 COPY --from=builder /app/.venv /app/.venv
 COPY agdbot-anonymous-telegram-board/ ./agdbot-anonymous-telegram-board/
-COPY config.yaml .
 CMD ["/app/.venv/bin/python", "agdbot-anonymous-telegram-board/main.py"]
